@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+
+        //转换成数据类型
+
+        //方法1：Number(要转换的内容)
+        //如果转换内容不是一个数值，则返回NaN
+
+        // var s1 = '100'
+        // var n1 = Number(s1)
+        // console.log(typeof n1)
+
+        // var s2 = '100a'
+        // var n2 = Number(s2)
+        // console.log(typeof n2)
+        // console.log(n2)
+
+
+        // var t1 = true
+        // var t2 = false
+        // var n3 = Number(t1)
+        // var n4 = Number(t2)
+        // console.log(typeof n3)
+        // console.log(typeof n4)
+        // console.log(n3)
+        // console.log(n4)
+
+        // var u  
+        // var n5 = Number(u)
+        // console.log(n5)
+
+
+
+        console.log('=================================')
+
+
+        //方法2：parseInt(你要转换的数据)
+        //从左到右一位一位看，把能转换的都转换了，遇到不能转换的就直接停止
+        //把之前转换的结果给你
+        //如果第一位就不能转换，则返回NaN
+
+        // var n1 = '100'
+        // var res1 = parseInt(n1)
+        // console.log(res1)
+
+        // var n2 = '100a'
+        // var res2 = parseInt(n2)
+        // console.log(res2)
+
+
+        // var n3 = 'a100'
+        // var res3 = parseInt(n3)
+        // console.log(res3)
+         
+
+        // var n4 
+        // var res4 = parseInt(n4)
+        // console.log(res4)
+
+        // var n5 = true
+        // var n6 = false
+        // var res5 = parseInt(n5)
+        // var res6 = parseInt(n6)
+
+
+        // console.log(res5)
+        // console.log(res6)
+
+        //方法3：parseFloat,和parseInt一样，这个可以识别小数点
+
+        //方法4：进行一个非+运算
+        // - * / %
+
+        var n1 = '100'
+        console.log(n1 - 0)
+        console.log(n1 * 1)
+        console.log(n1 % 101)
+        console.log(n1 / 1)
+        //唯独加法不行，加法是组合字符串用的，两项相加只要有一个是字符串，加出来的东西就是字符串
+
+        console.log(n1 + 1)
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
