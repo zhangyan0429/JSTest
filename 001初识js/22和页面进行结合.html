@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <input id="first" type="text"> + <input id="second" type="text"> <button id="btn" >=</button> <input id="result" type="text">
+    <script>
+        btn.onclick = function(){
+            console.log('我被点击了')
+            var firstNum = first.value - 0
+            var secondNum = second.value - 0
+            //只要是从页面中拿出来的数据都是字符串
+            var sumNum = firstNum + secondNum
+            result.value = sumNum
+        }
+    </script>
+</body>
+</html>
