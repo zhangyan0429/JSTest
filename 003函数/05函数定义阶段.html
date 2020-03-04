@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /* 
+            1.开辟一个内存空间
+            2.把你写的代码一摸一样放在空间里
+            3.把空间地址给到变量名（函数名）
+        
+        */
+       var num = 100
+       function fun() {
+           //我存储起来的内容就是console.log(num)，而不是console.log（100）
+           console.log(num)
+       }
+
+       num = 200
+       fn()
+       //这个时候打印出来的就是200
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

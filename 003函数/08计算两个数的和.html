@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+
+        //求n个数字的和
+
+        function fn(){
+            var sum = 0
+            //自带一个arguments参数，是一个伪数组，可以用索引取值，
+            for(i = 0;i < arguments.length;i++){
+                sum +=arguments[i]
+                
+            }
+            console.log(sum)
+        }
+
+        fn(1,2,3,4,5,6)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
