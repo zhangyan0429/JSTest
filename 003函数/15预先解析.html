@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+    </script>
+</head>
+<body>
+    <script>
+
+        /* 
+        预解析（预解释）
+        就是在代码执行之前，对代码进行通读，把一些东西解析出来
+
+
+        解析（一共解析两个东西）
+        1.声明式函数 function fn（）{}
+        2.var关键字
+        
+        做什么
+        1.会把var生命的变量提前
+        2.把声明变量提前，
+
+        */
+        console.log(num)//这个时候num是undefined，还没有值
+        var num = 100
+        console.log(num)//这个时候num有值了，是100
+
+
+        fn()
+        function fn(params) {
+            console.log('声明变量')
+        }
+        fn()
+
+        //上述函数实际的执行顺序是
+        //声明函数
+        //fn()
+        //fn()
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            height: 20000px;
+        }
+    </style>
+    <script>
+        window.onload = function (params) {
+            btn.onclick = function (params) {
+                console.log('我是按钮')
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <button id  = 'btn'>按钮</button>
+
+    <script>
+        window.onresize = function (params) {
+            console.log('我改变了大小')
+        }
+        window.onscroll = function (params) {
+            console.log('我开始滚了')
+        }
+    </script>
+</body>
+</html>

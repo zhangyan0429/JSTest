@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var a = b = 0//预解析先声明变量a，然后开始执行b = 0,然后b赋值给a，然后往下执行
+        // a = 10
+        // b = 20
+        // console.log(a)
+        // console.log(b)
+
+        // var a = b = c//报错，b和c都没声明
+
+        // a = 10
+        // b = 20
+        // c = 30
+        // console.log(a)
+        // console.log(b)
+        // console.log(c)
+
+
+        // console.log(num)//这里输出undefined，不管if判断是true还是false，里面的变量都要预解析，num先声明，没有值
+        // if (true) {
+        //     var num = 100
+        // }
+        // console.log(num)//这里打印100
+
+
+            // fn()//打印helloworld
+            // function fn(){
+            //     console.log('helloworld')
+            //     var fn = 100
+            // }
+            // fn()//这里报错，因为fn已经在上一个函数里被赋值为100了
+
+
+            // fn()//打印helloworld
+            // var fn = 100
+            // function fn(){
+            //     console.log('helloworld')
+                
+            // }
+            // fn()//报错
+
+
+            var fn = 100
+            fn()//报错，这里fn已经被赋值为100了
+            function fn(){
+                console.log('helloworld')
+                
+            }
+            fn()//当然也报错
+
+    </script>
+</body>
+</html>

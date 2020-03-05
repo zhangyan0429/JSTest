@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log(num)
+        // fn()
+
+        // var num = 100
+        // function fn(params) {
+        //     console.log('helloworld')
+        // }
+        // console.log(num)
+        // fn()
+            // fn()
+            // function fn(params) {
+            //     console.log('我是函数')
+            // }
+            // var fn = 100
+            // fn()//这里会报错（fn不是函数），因为fn先被声明为一个变量并且赋值一个函数地址，所以第一个fn()会被执行
+            //var fn = 100 的时候fn被重新赋值，所以fn已经不是函数了而是100
+            fn()
+            var fn = 100
+            function fn(params) {
+                console.log('我是函数')
+            }
+           
+            fn()//这里同样会报错，原理同上
+    </script>
+</body>
+</html>
