@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id = 'inp'>
+    <button id = 'btn'>计算阶乘</button>
+    <input type="text" id = 'result'>
+    <script>
+
+        
+        btn.onclick = function jieCheng() {
+            var n = inp.value - 0
+            var sum = 1
+            for (let i = 1; i <= n; i++) {
+                sum = sum *i
+                
+            }
+            result.value = sum
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 判断100-200之间的质数 */
+        function isZhishu(i) {
+            for (let j = 2 ; j < i; j++) {
+                if (i % j === 0) {
+                    return console.log(i + '不是质数')
+                    
+                }else if (j === i - 1) {
+                    return console.log(i + '是质数')
+                }
+                               
+            }
+
+
+        }
+
+        function fn(a,b){
+            for (let i = a; i <= b; i++) {
+                isZhishu(i)
+                
+            }
+        }
+        fn(100,200)
+    </script>
+</body>
+</html>
