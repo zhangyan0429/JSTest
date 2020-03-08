@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var arr = ['hello','world','你好','世界']
+
+        //字符串拼接方法concat（）返回值是一个新数组
+
+        // var res = arr.concat(['我是新来的'],['我是新来的2','我是新来的3'])//不改变原数组
+        // console.log(res)
+
+        // //splice(开始的索引，截取的长度)对数组进行截取
+        var res1 = arr.splice(1,2)//从第1个位置截取，截取两个，直接改变原始数组，返回值是一个数组
+        console.log(arr)//原数组发生改变
+        console.log(res1)
+
+        // var res2 = arr.splice(1)//当第二个参数不传递的时候，就是从索引位置截取到末尾
+        // var res3 = arr.splice(1,1,'新来的1','新来的2')//从第三个参数开始，全都是替换掉截取的位置
+
+        // var res4 = arr.splice(2,0,'插入')//在2的位置插入这个数据,没有返回值
+        // console.log(arr)
+
+        //reverse()反转数组
+        // var res = arr.reverse()
+        // console.log(res)
+
+        //sort()排序，直接改变原始数组，返回值是排序好的数组，按照一位一位排序
+        var arr = [1,2,3,4,22,11,15,24,36,48]
+        // var res = arr.sort()
+       // console.log(res)//结果是1，11，15，2，22，24，3，36，4，48，
+
+        //sort()按大小排序
+        // var res = arr.sort(function (a,b) { 
+        //     return b - a //升序，降序是b-a
+            
+        // })
+        // console.log(res)
+
+        //join（） 数组拼接成字符串，如果不传参数，则默认以逗号分隔
+        // var res = arr.join('@')
+        // console.log(res)
+
+            //slice(开始的索引，结束的索引)截取数组，包前不包后，不改变原始数组，返回一个新数组
+            // var res = arr.slice(2,3)//截取第二个位置的数据
+            // console.log(res)
+            //如果不屑结束索引，那就从开始索引截取到末尾 
+
+
+
+
+    </script>
+</body>
+</html>

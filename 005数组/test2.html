@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 输出一个5x5的二维数组的左下半三角 */
+       
+        function fuZhi() {
+            var bigarr = []
+            var smallarr = []
+            for (let i = 1; i <= 25; i++) {
+                smallarr.push(i)
+                if (i % 5 === 0) {
+                    bigarr.push(smallarr)
+                    smallarr = []
+                }
+                
+            }
+            return bigarr
+        }
+
+        function print(arr) {
+            for (let i = 0; i < arr.length; i++) {
+               arr[i].length = i + 1
+               console.log(arr[i])
+                
+            }
+            return arr
+        }
+        var res = fuZhi()
+        var lastres = print(res)
+
+        //把结果拼成一个一维数组
+
+        var newarr = []
+        for (let i = 0; i < lastres.length; i++) {
+            newarr = newarr.concat(lastres[i])
+
+        }
+
+        console.log(newarr)
+    </script>
+</body>
+</html>

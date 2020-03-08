@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var arr = new Array(30)
+        //给数组赋值
+        function fuZhi(arr) {
+            for (let i = 0,j = 2; i < arr.length; i++,j+=2) {
+                    
+                    arr[i] = j
+                    
+                
+                
+            }
+            return arr
+        }
+
+        //每五个数求平均值
+        function ave(arr) {
+            //定义一个输出用的数组
+            var res = new Array(6)
+            //把拆分的原数组放到输出数组里
+
+            for (let i = 0; i < res.length; i++) {
+                res[i]  = arr.splice(0,5)
+                
+            }
+
+            //对拆分后的小数组求平均值
+            for (let j = 0, ave = 0,sum = 0; j < res.length; j++) {
+                ave = 0
+                sum = 0
+                //求拆分的小数组的和
+                for (let k = 0; k  < 5; k++) {
+                    sum = sum + res[j][k]
+                    
+                }
+                //平均值等于和除以个数
+                ave = sum / res[j].length
+                res[j] = ave
+            }
+
+            return res
+        }
+        var res = fuZhi(arr)
+        var lastres = ave(res)
+        console.log(lastres)
+        
+    </script>
+</body>
+</html>

@@ -12,7 +12,24 @@
             堆栈存储空间
                 1.基本数据类型存在栈里，栈是有队列关系的
                 2。复杂数据类型，数据存在堆里，地址存在栈里
+
         */
+
+        /* 嵌套对象 */
+        var obj = {
+            name : 'jack',
+            o1:{
+                name : 'rose',
+                o2 : {
+                    name : 'tom'
+                }
+                
+            }
+        }
+        /* 打印不同对象中的name */
+        console.log(obj.o1.o2.name)
+        console.log(obj.o1.name)
+        console.log(obj.name)
     </script>
 </body>
 </html>
