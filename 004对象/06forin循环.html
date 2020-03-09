@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* 
+        forin用来遍历对象
+        点语法，点后面不是变量，即使有同名的变量也不打印，点后边就是对象成员
+        */
+        var obj = {
+            name : 'zhangyan',
+            age : 25,
+            gender : '男'
+        }
+
+        // var attr = 'name'
+        // console.log(obj.attr)//这个不会被识别为obj.name，attr不会被认为是变量
+
+        for (const attr in obj) {
+            console.log(obj[attr])
+        }
+    </script>
+</body>
+</html>

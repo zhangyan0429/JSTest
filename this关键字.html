@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* this是一个再作用域里面使用的关键字 
+            1.再全局作用域里使用
+            2.再私有作用域里使用（在函数里使用）
+
+
+            this一般在函数里使用
+            this和函数的定义没有关系，只看函数怎么调用
+            */
+            /* 1.全局调用  直接写函数名（）的时候，函数内部的this就是window
+                2.方法调用 */
+            function fn() {
+                console.log(this)//this就是window
+            }
+            fn()
+
+
+            var obj = {
+                name : 'zhangyan',
+                fun : function () {
+                    console.log(this)//这里的this就是obj
+                a : fn
+                }
+            }
+            obj.fun()
+    </script>
+</body>
+</html>

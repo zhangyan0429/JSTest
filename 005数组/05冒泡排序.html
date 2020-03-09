@@ -7,9 +7,17 @@
 </head>
 <body>
     <script>
+        /* 
+        冒泡排序核心
+            1.双层for循环
+            2.里层循环交换变量
+            3.一个循环减去一个1
+            4.里层循环再减去一个外层循环变量
+        */
         var arr = [3,2,67,8,5,8,787,456,7,45,435,23]
         var t = 0
         for (let j = 0; j < arr.length - 1; j++) {
+            //每循环一次，下一次就比上一次少比一次
             for (let i = 0; i < arr.length - (j+1); i++) {
                 if (arr[i] > arr[i+1]) {
                     t = arr[i]
