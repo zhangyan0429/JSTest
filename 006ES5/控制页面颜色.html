@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button id ='btn'>换个颜色</button>
+    <script src="random.js"></script>
+    <script>
+
+        // btn.onclick = function () {
+        //     var r = getRandom(0,255)
+        //     var g = getRandom(0,255)
+        //     var b = getRandom(0,255)
+        //     var str = 'rgb(' + r + ',' + g + ',' + b + ')'
+
+        //     document.body.style.backgroundColor = str
+        // }
+
+        //定时器setinterval(函数,时间)：每隔一段时间执行一次函数，时间是毫秒单位
+
+        setInterval(() => {
+            var r = getRandom(0,255)
+            var g = getRandom(0,255)
+            var b = getRandom(0,255)
+            var str = 'rgb(' + r + ',' + g + ',' + b + ')'
+
+            document.body.style.backgroundColor = str
+        }, 100);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //浏览器弹出层
+            //统一的特点：会把程序阻断，
+            //弹出层这一行的代码没有执行完毕，这一行后面的代码都不会执行
+            //只能输出字符串
+
+
+        //1.alert（）
+        window.alert('我是弹出层')//用来提示信息，只有一个确定按钮，没有返回值
+        //2.confirm（）询问框，提示信息，让用户选择，是否保存账号密码之类的
+        var t = confirm('您已成功注册，点击跳转确定页面')//有返回值，确定就是true，取消就是false
+        //3.promot()弹出一个输入框，让用户输入内容，接收一个参数，
+        //就是用户的信息，有一个确定一个取消，有返回值，返回用户输入的内容，不输入就是空字符串，点击取消就是null
+        
+    </script>
+</body>
+</html>

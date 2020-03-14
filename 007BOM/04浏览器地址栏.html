@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = 'btn'>登录</button>
+        <script>
+            //location对象，存着地址栏相关信息
+
+            //1.herf属性，获取当前地址
+                // var u1 = location.href
+                // console.log(u1)
+
+                // btn.onclick = function () {
+                //     location.href = 'https://www.baidu.com'
+                // }
+
+            //2.reload()刷新不能写在全局里
+                btn.onclick = function () {
+                    location.reload()
+                }
+        </script>
+</body>
+</html>

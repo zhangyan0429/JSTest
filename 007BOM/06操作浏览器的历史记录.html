@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = 'b'>后退</button>
+    <button id = 'f'>前进</button>
+    <button id = 't'>跳转</button>
+    <script>
+        //history对象，
+            //1.back()回退一个页面
+            //2.forward()前进一个页面
+            //3.go(前进或后退的页数)，参数为正数则前进，负数则后退
+        b.onclick = function () {
+                history.back()
+        }
+        f.onclick = function () {
+                history.forward()
+        }
+        t.onclick = function () {
+            location.href = 'b.html'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id = 'obj'></div>
+    <script>
+        function subTime(t1,t2) {
+            var t = parseInt(Math.abs(t1.getTime() - t2.getTime()) / 1000)
+            var day = parseInt(t / (3600 * 24))
+            var subday = t - day * 3600 * 24
+            var hour = parseInt(subday / 3600)
+            var subhour = parseInt(subday - hour * 3600)
+            var minute = parseInt(subhour / 60)
+            var second = t % 60
+            var str  = ''
+            str += day +'天'
+            str += hour +'小时'
+            str += minute + '分钟'
+            str += second + '秒'
+
+            return str
+           
+        }
+     
+        var time2 = new Date('2020-4-1')
+        setInterval(() => {
+            var time1 = new Date()
+            var time = subTime(time1,time2)
+            
+            obj.innerText = time
+       }, 1000);
+
+       
+    </script>
+</body>
+</html>
