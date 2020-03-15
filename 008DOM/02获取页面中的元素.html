@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1"></div>
+
+    <p class="box"></p>
+    <p class="box"></p>
+    <p class="box"></p>
+    <p class="box"></p>
+    <p class="box"></p>
+    <p class="box"></p>
+    <p class="box"></p>
+    <p class="box"></p>
+    <p class="box"></p>
+    <p class="box"></p>
+    <input type="text" name = 'abc'>
+    <input type="text" name = 'abc'>
+    <input type="text" name = 'abc'>
+    <input type="text" name = 'abc'>
+    <input type="text" name = 'abc'>
+    <input type="text" name = 'abc'>
+    <input type="text" name = 'abc'>
+    <input type="text" name = 'abc'>
+    <input type="text" name = 'abc'>
+    <input type="text" name = 'abc'>
+    <input type="text" name = 'abc'>
+    <script>
+
+        //id 可以在js中使用，但非常规，不使用
+        /* 
+        常规
+            用dom的方法获取页面上的元素，然后进行操作
+        */
+
+        //1.获取html标签
+        //     var html = document.documentElement
+        //     console.log(html)
+        // //2.获取head标签
+        //     var head = document.head
+        //     console.log(head)
+        // //3.获取body标签
+        //     var body = document.body
+        //     console.log(body)
+        
+        //4.getElementById(),是一个document方法，通过元素的id来获取元素，获取到的只能是一个元素
+            // var box = document.getElementById('box1')//如果页面中没有这个元素，则获得null
+            // console.log(box)
+            // box.onclick = function () {
+
+            // }
+        //5.getElementsByClassName()
+        //是一个document下的方法，通过元素的class名获取元素
+        //可能获取到多个元素
+        //返回一个伪数组，含有所有元素，或者返回空的伪数组
+            // var ps = document.getElementsByClassName('box')
+            // console.log(ps)
+        //6.gerElementsByTagName()
+        //通过标签名获取元素
+        //也是返回伪数组
+            // var ps = document.getElementsByTagName('p')
+            // console.log(ps)
+        //7.getElementsByName()
+        //通过元素name属性来进行获取
+        //也返回伪数组
+            // var ns = document.getElementsByName('abc')
+            // console.log(ns)
+        //8.querySelector()
+        //按照书写css时候的方式进行获取
+        //只能获取到满足条件的第一个元素*
+                // var box1 = document.querySelector('#box1')
+                // console.log(box1)
+                // var box = document.querySelector('.box')
+                // console.log(box)
+        //9.querySelectorAll()
+        //获取满足条件的所有元素
+        //返回一个伪数组
+        //可以用forEach方法来遍历这个伪数组
+                var box = document.querySelectorAll('.box')
+                // console.log(box)
+                box.forEach(function (item) {
+                    console.log(item)
+                })
+
+    </script>
+</body>
+</html>

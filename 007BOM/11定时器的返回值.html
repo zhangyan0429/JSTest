@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //定时器返回值
+        //返回值不分timeout还是interval
+        //返回的时当前页面的第几个定时器，数值型
+        //用来关闭定时器
+
+        var res = setTimeout(() => {
+            console.log('炸弹')
+        }, 1000);
+        console.log(res)
+        
+        var res2 = setInterval(() => {
+            console.log('间隔')
+        }, 1000);
+        console.log(res2)
+    </script>
+</body>
+</html>

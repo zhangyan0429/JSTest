@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            height: 2000px;
+        }
+        button{
+            position :fixed;
+            right : 50px;
+            bottom : 50px
+
+        }
+    </style>
+</head>
+<body>
+    <button id = 'btn'>button</button>
+        <script>
+
+            //document.documentElement.scrollTop 被卷去的高度
+            window.onscroll = function () {
+                var t = document.documentElement.scrollTop || document.body.scrollTop
+                console.log(t)
+            }
+            btn.onclick = function () {
+                setInterval(() => {
+                    document.body.scrollTop -= 20
+                    document.documentElement.scrollTop -= 50  
+                }, 1);
+               
+
+            }
+
+        </script>
+</body>
+</html>

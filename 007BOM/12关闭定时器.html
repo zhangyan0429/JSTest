@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">关闭定时器</button>
+    <script>
+
+        //语法一样
+        //clearsetTimeout
+        //clearsetInterval
+        //不区分，用哪个关任何一个定时器都行
+
+        var timerID = setTimeout(() => {
+            console.log('炸弹定时器')
+        }, 3000);
+
+        var timerID2 = setInterval(() => {
+            console.log('间隔定时器')
+        }, 1000); 
+
+        btn.onclick = function () {
+            clearInterval(timerID)
+            clearTimeout(timerID2)
+        }
+
+    </script>
+</body>
+</html>

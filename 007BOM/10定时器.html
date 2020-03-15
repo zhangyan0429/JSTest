@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //两种定时器
+            //1.延时定时器 setTimeout(),在多少毫秒之后执行一次代码，只执行一次
+            //2.间隔定时器 setInterval()，只要不关闭就会一直执行函数
+
+            //1
+                setTimeout(() => {
+                    console.log('只执行一次')
+                }, 1000);//一秒钟后执行一次函数
+
+            //2
+                setInterval(() => {
+                    console.log('一直执行！')
+                }, 1000);//每秒执行一次，直到关闭定时器
+    </script>
+</body>
+</html>
