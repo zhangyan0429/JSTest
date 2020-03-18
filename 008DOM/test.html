@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th><th>年龄</th><th>性别</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        //获取tbody标签
+        var tBody = document.querySelector('tbody')
+        //准备空字符串
+        
+        var arr = new Array()
+        arr = [
+            {
+                name : 'tom',
+                age : 18,
+                gender : '男'
+            },
+            {
+                name : 'jerry',
+                age : 19,
+                gender : '女'
+            },
+            {
+                name : 'zhangyan',
+                age : 26,
+                gender : '男'
+            }
+        ]
+        bindHTML()
+        function bindHTML() {
+            var str = ''
+
+            for (let i = 0; i < arr.length; i++) {
+            str += '<tr>'
+                //根据对象成员添加td
+                //遍历对象
+            for (const key in arr[i]) {
+                str += '<td>'
+
+                str +=arr[i][key]
+
+                str += '</td>'    
+            }
+
+            str += '<td class = "del">删除</td>'
+            str += '</tr>'
+        }
+        tBody.innerHTML = str
+        //渲染完表格之后绑定事件
+        bindEvent()
+        }
+        
+        function bindEvent() {
+            var dels = document.querySelectorAll('.del')
+            //遍历
+            for (let j = 0; j < dels.length; j++) {
+            
+            //给每个标签添加一个index属性
+            dels[j].setAttribute('index',j)
+            //给每一个按钮定义点击事件
+            dels[j].onclick = function () {
+                //不能使用j变量，执行这个函数的时候j已经是3了
+                //用this
+                var index = this.getAttribute('index') - 0 //index获得的是字符串，转换成数值型
+
+                arr.splice(index,1)
+                bindHTML()
+            }
+        }
+        }
+
+        //获得删除元素,伪数组
+        
+    </script>
+</body>
+</html>

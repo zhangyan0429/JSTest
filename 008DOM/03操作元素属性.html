@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+        <div style="height: 100px;" gender = '男'>
+            <p>我是p</p>
+        </div>
+        <script>
+            //1.innerHTML
+            //是一个读写的属性
+            //语法：元素.html
+            //读取该元素内部的html结构
+            //覆盖元素内部的html结构
+            // var html = document.querySelector('div')
+            // var p = html.innerHTML
+            // console.log(p)
+            // html.innerHTML = '<span>我是新标签</span>'
+
+            //2.innerText
+            //与innerHTML的区别是，不转换成标签，直接全是文本
+
+            // var html = document.querySelector('div')
+            
+            // html.innerText = '<span>我是新标签</span>'
+            //3.style
+            //是一个对象
+            //语法 元素.style
+            //只能修改行内样式
+            //获取行内样式
+            
+            // var div = document.querySelector('div')
+            // div.style.height = '1000px'
+            // div.style.display = 'none'
+
+            //4.className
+            //操作类名
+            //完全覆盖写入
+
+            // var div = document.querySelector('div')
+            // div.className = 'div5'
+
+            //5.getAttribute(属性名称)
+            //获取属性
+
+            // var div = document.querySelector('div')
+            // var gender = div.getAttribute('gender')
+            // console.log(gender)
+
+            //6.setAttribute(属性，值)
+            // var div = document.querySelector('div')
+            // div.setAttribute('age',22)
+
+            //7.removeAttribute(属性)
+            // var div = document.querySelector('div')
+            // div.removeAttribute('gender')
+
+        </script>
+</body>
+</html>
