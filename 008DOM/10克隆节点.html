@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <script>
+        var box = document.querySelector('.box')
+        //cloneNode()
+            //语法：元素.cloneNode()有一个参数选项
+            //返回值：被克隆的节点(默认不克隆子节点)
+            //参数：表示是否克隆子节点，默认为false
+        // var cloneBox = box.cloneNode()
+        // console.log(cloneBox)
+
+        var cloneBox = box.cloneNode(true)//克隆子节点
+        console.log(cloneBox)
+
+
+        
+    </script>
+</body>
+</html>

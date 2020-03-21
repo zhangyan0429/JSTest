@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    div{
+        height: 100px;
+        background-color: pink;
+    }
+</style>
+<body>
+    <div style="width: 100px;"></div>
+    <script>
+        var box = document.querySelector('div')
+        //style可以获取行内样式
+        //获取非行内样式
+        //1.getComputedStyle    标准浏览器
+        //2.currentStyle        IE低版本
+
+
+        //getComputedStyle
+            //语法：window.getComputedStyle(你要获取的元素)
+            //返回值：是一个对象，里面包含着该元素的所有样式信息
+            //想拿到某一属性的值
+            var styles = window.getComputedStyle(box)
+            console.log(styles.height)
+            console.log(styles.width)
+    </script>
+</body>
+</html>

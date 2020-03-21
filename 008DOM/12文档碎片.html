@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th><th>年龄</th><th>性别</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        //获取tbody标签
+        var tBody = document.querySelector('tbody')
+        //文档碎片
+        //是一个筐，可以被当作一个元素使用
+        //把tr丢到框里，筐在页面里不显示
+        //语法：document.createDocumentFragment()
+        //返回值就是一个筐
+        var box = document.createDocumentFragment()
+        var arr = new Array()
+        arr = [
+            {
+                name : 'tom',
+                age : 18,
+                gender : '男'
+            },
+            {
+                name : 'jerry',
+                age : 19,
+                gender : '女'
+            },
+            {
+                name : 'zhangyan',
+                age : 26,
+                gender : '男'
+            }
+        ]
+      
+        for (let i = 0; i < arr.length; i++) {
+            var tr = document.createElement('tr')
+
+            if (i % 2 === 0 ) {
+                tr.style.backgroundColor = 'skyblue'
+            } else {
+                tr.style.backgroundColor = 'gray'
+            }
+            for (const attr in arr[i]) {
+                var td = document.createElement('td')
+                td.innerHTML = arr[i][attr]
+                tr.appendChild(td)
+
+            }
+            box.appendChild(tr)
+            
+        }
+        tBody.appendChild(box)
+    </script>
+</body>
+</html>
