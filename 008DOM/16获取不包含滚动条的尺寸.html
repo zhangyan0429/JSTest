@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            height: 2000px;
+            width: 2000px;
+        }
+    </style>
+</head>
+<body>
+        <script>
+            //获取浏览器尺寸 bom级别
+
+            var height_bom = window.innerHeight
+            console.log(height_bom)
+
+            // var width_bom = window.innerWidth
+            // console.log(width_bom)
+
+            // //不包含滚动条的宽度和高度
+
+            // var width_dom = document.documentElement.clientWidth
+            // console.log(width_dom)
+
+            //获取窗口高度
+
+            var height_dom = document.documentElement.clientHeight
+            console.log(height_dom)
+        </script>
+</body>
+</html>
